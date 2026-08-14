@@ -1,15 +1,11 @@
 import {
   ArrowRight,
   Bot,
-  Compass,
   Layers,
-  LineChart,
-  Sparkles,
   Wand2,
 } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
-import Image from "next/image";
-import Link from "next/link";
+// import Image from "next/image";
 
 import { FadeIn } from "@/components/ui/motion-primitives";
 
@@ -33,85 +29,43 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    id: "loom",
-    icon: Sparkles,
-    iconLabel: "LOOM",
-    title:
-      "An AI writing companion that thinks alongside you, allowing you to capture ideas, edits, and drafts in one focused space.",
-    description:
-      "I designed Loom, a focused writing surface where ideas, edits, and drafts coexist without the chat clutter.",
-    meta: "Design Engineer, 2024",
-    imageRatio: 752 / 497,
-    image:
-      "https://cdn.dribbble.com/userupload/46128964/file/b92b9d268dd928642ca94bd49e32923a.jpg?resize=752x497&vertical=center",
-    imageAlt: "Loom AI writing companion mockup",
-  },
-  {
-    id: "atlas",
-    icon: Compass,
-    iconLabel: "Atlas Studio",
-    title: "A two week brand and product sprint for a creative studio.",
-    description:
-      "End to end identity, marketing site, and a small product surface designed to feel quietly confident across every touchpoint.",
-    meta: "Product & Brand Designer, 2025",
-    imageRatio: 1024 / 768,
-    image:
-      "https://cdn.dribbble.com/userupload/24599416/file/original-1ae5075dcd129aebb16bdbca24b41ac7.png?resize=1024x768&vertical=center",
-    imageAlt: "Atlas Studio brand and product sprint mockup",
-  },
-  {
-    id: "rhythm",
-    icon: LineChart,
-    iconLabel: "Rhythm",
-    title: "Calm analytics for indie founders.",
-    description:
-      "A weekly digest that turns raw product data into a simple narrative. Built so you can read it on a Sunday with coffee.",
-    meta: "Founder & Designer, 2024",
-    imageRatio: 1024 / 768,
-    image:
-      "https://cdn.dribbble.com/userupload/47357856/file/75841fa59f32f05ca6c5ddf02d08dfe6.png?resize=1024x768&vertical=center",
-    imageAlt: "Rhythm calm analytics mockup",
-  },
-  {
-    id: "groove",
-    icon: Wand2,
-    iconLabel: "Groove",
-    title:
-      "Reimagining the booking flow for a music school, asisting thousands of students in finding the right lessons.",
-    description:
-      "I led a redesign of the lesson booking experience, cutting drop off in half and making the schedule feel like a calendar people actually want to open.",
-    meta: "Lead Designer, 2023",
-    imageRatio: 1024 / 768,
-    image:
-      "https://cdn.dribbble.com/userupload/43955214/file/original-d4cde1de803e84b97d8892e3444c04b0.png?resize=1024x768&vertical=center",
-    imageAlt: "Groove music school booking flow mockup",
-  },
-  {
-    id: "fieldnote",
-    icon: Layers,
-    iconLabel: "Fieldnote",
-    title:
-      "A pocket sized research tool for design teams that want to get out of their docs and into the world.",
-    description:
-      "Capture quotes, tag patterns, and synthesize themes in one place. The interface stays out of the way so the thinking can happen.",
-    meta: "Design Engineer, 2024",
-    imageRatio: 1024 / 768,
-    image:
-      "https://cdn.dribbble.com/userupload/30310902/file/original-621e7fe47be9d11ee14544456c693bec.png?resize=1024x768&vertical=center",
-    imageAlt: "Fieldnote pocket sized research tool mockup",
-  },
-  {
-    id: "talkback",
+    id: "synapse",
     icon: Bot,
-    iconLabel: "Talkback",
-    title: "A friendlier interface for talking to language models.",
+    iconLabel: "Synapse AI",
+    title:
+      "An AI-powered memory and knowledge system that helps users store, retrieve, and interact with their information.",
     description:
-      "An exploration of how AI chat could feel less like a terminal and more like a conversation with a curious friend.",
-    meta: "Independent Project, 2025",
+      "I built Synapse as a RAG-based memory system that combines a FastAPI backend with retrieval-augmented generation to turn stored information into contextual AI responses.",
+    meta: "AI / Full-Stack Project, 2026",
     imageRatio: 1024 / 768,
-    image:
-      "https://cdn.dribbble.com/userupload/16560717/file/original-c6f745d50302d66609bfe080f99f5396.png?resize=1024x768&vertical=center",
-    imageAlt: "Talkback friendlier AI chat interface mockup",
+    image: "/synapse.jpg",
+    imageAlt: "Synapse AI memory and RAG system",
+  },
+  {
+    id: "air-canvas",
+    icon: Wand2,
+    iconLabel: "Air Canvas",
+    title:
+      "A computer vision project that lets you draw and interact with a digital canvas using hand gestures.",
+    description:
+      "I built Air Canvas to explore gesture-based interaction, using computer vision to track hand movements and translate them into real-time digital drawing.",
+    meta: "Computer Vision Project, 2026",
+    imageRatio: 1024 / 768,
+    image: "/aircanvas.jpg",
+    imageAlt: "Air Canvas gesture-based drawing application",
+  },
+  {
+    id: "user-authentication",
+    icon: Layers,
+    iconLabel: "User Authentication System",
+    title:
+      "A secure user authentication system designed to handle account creation, login, and protected application access.",
+    description:
+      "I built this project to strengthen my understanding of authentication, authorization, user sessions, and secure access to application resources.",
+    meta: "Full-Stack Project, 2026",
+    imageRatio: 1024 / 768,
+    image: "/userauth.jpg",
+    imageAlt: "User authentication system interface",
   },
 ];
 
@@ -135,8 +89,8 @@ export function Projects({
               My projects
             </h2>
             <p className="max-w-[33ch] text-[18px] leading-[1.45] tracking-tight text-foreground/65 sm:text-[20px]">
-              From playful experiments to thoughtful systems, a look at the
-              work I&rsquo;m proud to have shipped.
+              A collection of things I&rsquo;ve built while exploring AI, cloud,
+  software development, and everything in between.
             </p>
           </FadeIn>
         ) : null}
@@ -146,21 +100,7 @@ export function Projects({
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
-
-        {viewMoreVisible ? (
-          <div className="mt-12 flex justify-center sm:mt-16">
-            <Link
-              href="/projects"
-              className="border border-foreground/8 focus-ring group inline-flex cursor-pointer items-center gap-2 rounded-xl bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"
-            >
-              View all projects
-              <ArrowRight
-                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
-                aria-hidden="true"
-              />
-            </Link>
-          </div>
-        ) : null}
+     
       </div>
     </section>
   );
@@ -194,14 +134,14 @@ function ProjectCard({
           style={{ aspectRatio: project.imageRatio }}
         >
           <div className="project-card__image-inner">
-            <Image
+            {/* <Image
               src={project.image}
               alt={project.imageAlt}
               fill
               sizes="(min-width: 1024px) 540px, (min-width: 768px) 45vw, 100vw"
               className="object-cover"
-              priority={index < 2}
-            />
+              priority={index < 2} */}
+            {/* /> */}
           </div>
         </div>
 

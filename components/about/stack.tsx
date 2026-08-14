@@ -13,21 +13,60 @@ type Chip = {
 
 const CHIPS: Chip[] = [
   {
+    label: "React",
+    slug: "react",
+    bg: "#20232A",
+    fg: "#61DAFB",
+  },
+  {
+    label: "Next.js",
+    slug: "nextdotjs",
+    bg: "#000000",
+    fg: "#ffffff",
+  },
+  {
+    label: "Java",
+    slug: "openjdk",
+    bg: "#ED8B00",
+    fg: "#ffffff",
+  },
+  {
+    label: "SQL",
+    slug: "mysql",
+    bg: "#4479A1",
+    fg: "#ffffff",
+  },
+  {
+    label: "AWS",
+    slug: "amazonaws",
+    bg: "#232F3E",
+    fg: "#FF9900",
+  },
+  {
+    label: "GitHub",
+    slug: "github",
+    bg: "#181717",
+    fg: "#ffffff",
+  },
+  {
     label: "Figma",
     slug: "figma",
-    bg: "#1f1f1f",
+    bg: "#1F1F1F",
     fg: "#ffffff",
     iconUrl: "https://svgl.app/library/figma.svg",
   },
-  { label: "React", slug: "react", bg: "#1FB6CB", fg: "#ffffff" },
-  { label: "Next.js", slug: "nextdotjs", bg: "#1f1f1f", fg: "#ffffff" },
-  { label: "TypeScript", slug: "typescript", bg: "#2F74C0", fg: "#ffffff" },
-  { label: "shadcn/ui", slug: "shadcnui", bg: "#5b54ff", fg: "#ffffff" },
-  { label: "Cursor", slug: "cursor", bg: "#111111", fg: "#ffffff" },
-  { label: "GSAP", slug: "gsap", bg: "#0AE448", fg: "#0a0a0a" },
-  { label: "GitHub", slug: "github", bg: "#181717", fg: "#ffffff" },
-  { label: "Vercel", slug: "vercel", bg: "#0a0a0a", fg: "#ffffff" },
-  { label: "Tailwind CSS", slug: "tailwindcss", bg: "#2BBCF5", fg: "#ffffff" },
+  {
+    label: "Vercel",
+    slug: "vercel",
+    bg: "#000000",
+    fg: "#ffffff",
+  },
+  {
+    label: "DSA",
+    slug: "leetcode",
+    bg: "#FFA116",
+    fg: "#ffffff",
+  },
 ];
 
 const CHIP_RADIUS = 14;
