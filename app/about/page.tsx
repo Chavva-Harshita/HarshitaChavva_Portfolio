@@ -26,18 +26,20 @@ export default function AboutPage(): ReactNode {
         <FadeIn delay={0.5}>
           <div className="rounded-4xl border border-foreground/5 bg-foreground/1.5 p-8 sm:p-12 dark:bg-foreground/3">
             <h1 className="font-serif text-[1.75rem] font-medium tracking-tight text-foreground sm:text-[2rem]">
-              Hello! I&rsquo;m <span className="border-b border-foreground/30 pb-0.5">Josh Mercer</span>.
+              Hello! I&rsquo;m <span className="border-b border-foreground/30 pb-0.5">Harshita Chavva</span>.
             </h1>
             <div className="mt-8 space-y-6 text-[17px] leading-[1.7] tracking-tight text-foreground/75 sm:text-[18px]">
               <p>
-                A <strong className="font-semibold text-foreground">product designer and frontend engineer</strong> passionate about building intuitive, human-centered digital experiences. With a background in <strong className="font-semibold text-foreground">visual craft</strong> and <strong className="font-semibold text-foreground">interaction design</strong>, I bring a unique blend of design thinking and technical execution to every project.
-              </p>
-              <p>
-                My journey into design began when I realized how often good user experience was missing from powerful tools. That led me to embrace <strong className="font-semibold text-foreground">user-centered design</strong> as both a mindset and a craft, one that balances clarity, creativity, and functionality.
-              </p>
-              <p>
-                Currently leading design at small product teams shipping software for <strong className="font-semibold text-foreground">creative professionals</strong>, I&rsquo;m always looking for opportunities to <strong className="font-semibold text-foreground">shape thoughtful interfaces and build scalable design systems</strong>.
-              </p>
+  I&rsquo;m a <strong className="font-semibold text-foreground">Software Engineer and creative developer</strong> who loves turning ideas into things people can actually use. I&rsquo;m fascinated by the space where <strong className="font-semibold text-foreground">technology, cloud, and design meet</strong>, and I enjoy building experiences that are both thoughtful and functional.
+</p>
+
+<p>
+  I&rsquo;ve always been drawn to creating things — whether that&rsquo;s building applications, designing interfaces, working with <strong className="font-semibold text-foreground">cloud and DevOps technologies</strong>, experimenting with AI, or exploring a new visual idea. I enjoy moving between <strong className="font-semibold text-foreground">engineering and visual design</strong> to figure out how an idea can become something real.
+</p>
+
+<p>
+  I&rsquo;m currently pursuing my <strong className="font-semibold text-foreground">B.Tech in Computer Science Engineering</strong>, specializing in Cloud Native Engineering and DevOps. I&rsquo;m constantly learning, building, and experimenting with <strong className="font-semibold text-foreground">cloud infrastructure, AI, software engineering, and UI/UX</strong> — always looking for the next interesting problem to solve.
+</p>
             </div>
           </div>
         </FadeIn>
