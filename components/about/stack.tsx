@@ -41,6 +41,7 @@ const CHIPS: Chip[] = [
     slug: "amazonaws",
     bg: "#232F3E",
     fg: "#FF9900",
+    iconUrl: "https://svgl.app/library/aws.svg",
   },
   {
     label: "GitHub",
@@ -67,6 +68,19 @@ const CHIPS: Chip[] = [
     bg: "#FFA116",
     fg: "#ffffff",
   },
+  {
+    label: "C",
+    slug: "C",
+    bg: "#A8B9CC",
+    fg: "#2A2A2A",
+  },
+  {
+    label: "RAG",
+    slug: "RAG",
+    bg: "#7C3AED",
+    fg: "#45F3FF",
+  },
+
 ];
 
 const CHIP_RADIUS = 14;

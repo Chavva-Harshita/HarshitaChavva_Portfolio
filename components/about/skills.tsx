@@ -1,17 +1,16 @@
 import type { ReactNode } from "react";
 
 const SKILLS = [
-  "UI/UX Design",
-  "Design Systems",
-  "Prototyping & Motion",
-  "Frontend Development",
-  "TypeScript & React",
-  "Interaction Design",
-  "Performance Tuning",
-  "Accessibility",
-  "Visual Identity",
+  "Software Engineering",
+  "Full-Stack Development",
+  "React & TypeScript",
+  "Java & Python",
+  "Cloud Computing",
+  "DevOps & CI/CD",
+  "Docker & Kubernetes",
+  "AWS & Google Cloud",
+  "AI & RAG Systems",
 ];
-
 export function Skills(): ReactNode {
   return (
     <div className="flex flex-col gap-3">

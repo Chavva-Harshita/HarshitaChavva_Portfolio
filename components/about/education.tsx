@@ -5,24 +5,23 @@ type Entry = {
   degree: string;
   period: string;
   slug?: string;
+  brand?: string;
 };
 
 const ENTRIES: Entry[] = [
   {
-    school: "Rhode Island School of Design",
-    degree: "BFA, Graphic Design",
-    period: "2013 – 2017",
+    school: "Jamshedpur Public School",
+    degree: "Intermediate, PCM",
+    period: "2022 – 2024",
+    brand: "#DB2777",
   },
   {
-    school: "Stanford University",
-    degree: "HCI Certificate, d.school",
-    period: "2018",
+    school: "KL University",
+    degree: "B.Tech in Computer Science Engineering",
+    period: "2024 – 2028",
+    brand: "#F59E0B",
   },
-  {
-    school: "Bruno Simon's Three.js Journey",
-    degree: "WebGL & Shaders",
-    period: "2022",
-  },
+ 
 ];
 
 const ROW_HEIGHT = 64;
