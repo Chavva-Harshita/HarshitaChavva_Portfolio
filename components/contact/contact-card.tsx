@@ -42,24 +42,24 @@ export function ContactCard(): ReactNode {
               <div className="border-foreground/8 flex flex-col items-center justify-center gap-6 rounded-[1.1rem] border bg-background p-6 sm:p-8">
                 <div className="flex items-center gap-3 opacity-75">
                   <SocialIcon
-                    href="mailto:hello@example.com"
+                    href="mailto:harshitachavva9@gmail.com"
                     label="Email"
                     lucideIcon={Mail}
                   />
                   <SocialIcon
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/in/harshita-chavva-86b417316/"
                     label="LinkedIn"
                     imageSrc="/linkedin.svg"
                   />
                   <SocialIcon
-                    href="https://x.com"
-                    label="X"
-                    imageSrc="/x.svg"
+                    href="https://leetcode.com/u/kl2400032744/"
+                    label="Leetcode"
+                    imageSrc="/leetcode.png"
                   />
                 </div>
                 <div className="flex flex-col items-center gap-1 text-center">
                   <p className="text-[13px] tracking-tight text-foreground/70">
-                    2026 &copy; Built with Next.js
+                    2026 &copy; Built with Next.js and love by Harshita Chavva. All rights reserved.
                   </p>
                   <p className="text-[12px] tracking-tight text-foreground/45">
                     By React Bits Pro
@@ -105,7 +105,7 @@ function SocialIcon({
           width={14}
           height={14}
           aria-hidden="true"
-          className="max-h-[14px] max-w-[14px] object-contain dark:invert"
+          className="max-h-3.5 max-w-3.5 object-contain dark:invert"
         />
       ) : null}
     </Link>

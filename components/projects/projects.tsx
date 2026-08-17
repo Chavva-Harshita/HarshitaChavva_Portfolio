@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   Bot,
   Layers,
   Wand2,
