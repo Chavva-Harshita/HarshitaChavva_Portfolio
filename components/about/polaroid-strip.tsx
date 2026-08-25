@@ -1,9 +1,8 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
-import { useRef, useSyncExternalStore, type ReactNode } from "react";
+import {  motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import {  useRef, useSyncExternalStore, type ReactNode } from "react";
 
-import { DottedPattern } from "@/components/ui/dotted-pattern";
 
 type Polaroid = {
   id: string;
@@ -12,10 +11,10 @@ type Polaroid = {
 };
 
 const PHOTOS: Polaroid[] = [
-  { id: "a", image: "/polaroid6.jpeg", rotate: -8 },
+  { id: "a", image: "/polaroid1.jpeg", rotate: -8 },
   { id: "b", image: "/polaroid2.jpg", rotate: 6 },
   { id: "c", image: "/polaroid3.jpg", rotate: -4 },
-  { id: "d", image: "/polaroid1.jpg", rotate: 7 },
+  { id: "d", image: "/polaroid6.jpg", rotate: 7 },
   { id: "e", image: "/polaroid5.jpg", rotate: -6 },
   { id: "f", image: "/polaroid4.jpg", rotate: 5 },
 ];
