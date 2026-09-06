@@ -1,16 +1,12 @@
 import {
   Bot,
+  Github,
   Layers,
   Wand2,
 } from "lucide-react";
+import Image from "next/image";
 import type { ComponentType, ReactNode } from "react";
 import { FadeIn } from "@/components/ui/motion-primitives";
-
-/**
- * Project imagery below is mockup-only. All visuals are sourced from
- * Dribbble and credit belongs to the original creators on dribbble.com.
- * Replace these with your own work before shipping.
- */
 
 type Project = {
   id: string;
@@ -22,6 +18,7 @@ type Project = {
   imageRatio: number;
   image: string;
   imageAlt: string;
+  githubUrl: string;
 };
 
 const PROJECTS: Project[] = [
@@ -37,7 +34,9 @@ const PROJECTS: Project[] = [
     imageRatio: 1024 / 768,
     image: "/synapse.jpg",
     imageAlt: "Synapse AI memory and RAG system",
+    githubUrl: "https://github.com/Chavva-Harshita/synapse-ai",
   },
+
   {
     id: "air-canvas",
     icon: Wand2,
@@ -50,19 +49,38 @@ const PROJECTS: Project[] = [
     imageRatio: 1024 / 768,
     image: "/aircanvas.jpg",
     imageAlt: "Air Canvas gesture-based drawing application",
+    githubUrl: "https://github.com/Chavva-Harshita/aircanvas",
   },
+
   {
-    id: "user-authentication",
+    id: "flexywork",
     icon: Layers,
-    iconLabel: "User Authentication System",
+    iconLabel: "FlexyWork",
     title:
-      "A secure user authentication system designed to handle account creation, login, and protected application access.",
+      "A cooperative gig services platform that intelligently connects gig workers with service seekers based on skills, availability, location, and requirements.",
     description:
-      "I built this project to strengthen my understanding of authentication, authorization, user sessions, and secure access to application resources.",
+      "I built FlexyWork to simplify gig hiring through intelligent worker matching, secure authentication, worker profiles, availability management, gig applications, attendance tracking, and role-based workflows. The platform is designed to create a more transparent and efficient experience for both gig workers and service seekers.",
     meta: "Full-Stack Project, 2026",
     imageRatio: 1024 / 768,
-    image: "/userauth.jpg",
-    imageAlt: "User authentication system interface",
+    image: "/flexywork.png",
+    imageAlt: "FlexyWork cooperative gig services platform interface",
+    githubUrl: "https://github.com/Soumya1-byte/FlexyWork",
+  },
+
+  {
+    id: "clearlift",
+    icon: Layers,
+    iconLabel: "ClearLift",
+    title:
+      "An AI-powered platform designed to automate and streamline business workflows through intelligent agents and secure service integrations.",
+    description:
+      "I built ClearLift to explore AI-driven workflow automation, multi-agent systems, and scalable backend architecture. The platform uses specialized AI agents to analyze tasks, coordinate workflows, and deliver actionable results through a full-stack application.",
+    meta: "AI & Full-Stack Project, 2026",
+    imageRatio: 1024 / 768,
+    image: "/clearlift.png",
+    imageAlt:
+      "ClearLift AI-powered workflow automation platform interface",
+    githubUrl: "https://github.com/Chavva-Harshita/CLEARLIFT",
   },
 ];
 
@@ -85,19 +103,23 @@ export function Projects({
             <h2 className="font-serif text-[2.5rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[3rem] lg:text-[3.5rem]">
               My projects
             </h2>
+
             <p className="max-w-[33ch] text-[18px] leading-[1.45] tracking-tight text-foreground/65 sm:text-[20px]">
-              A collection of things I&rsquo;ve built while exploring AI, cloud,
-  software development, and everything in between.
+              A collection of things I&rsquo;ve built while exploring AI,
+              cloud, software development, and everything in between.
             </p>
           </FadeIn>
         ) : null}
 
         <div className="columns-1 gap-6 md:columns-2 md:gap-7">
           {items.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+            />
           ))}
         </div>
-     
       </div>
     </section>
   );
@@ -111,49 +133,76 @@ function ProjectCard({
   index: number;
 }): ReactNode {
   const Icon = project.icon;
+
   return (
     <FadeIn
       delay={Math.min(index * 0.06, 0.3)}
       className="mb-6 break-inside-avoid md:mb-7"
     >
       <article className="project-card flex cursor-pointer flex-col gap-4 rounded-3xl border border-foreground/8 bg-background p-3 sm:p-3.5">
+
+        {/* Project Header */}
         <header className="flex items-center gap-2.5 px-1 pt-2">
           <span className="border-foreground/10 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border bg-background">
-            <Icon className="h-3.5 w-3.5 text-foreground" aria-hidden="true" />
+            <Icon
+              className="h-3.5 w-3.5 text-foreground"
+              aria-hidden="true"
+            />
           </span>
+
           <span className="text-sm font-medium tracking-tight text-foreground">
             {project.iconLabel}
           </span>
         </header>
 
+        {/* Project Image */}
         <div
           className="project-card__image ring-foreground/5 relative w-full overflow-hidden rounded-2xl bg-foreground/5 ring-1"
           style={{ aspectRatio: project.imageRatio }}
         >
-          <div className="project-card__image-inner">
-            {/* <Image
+          <div className="project-card__image-inner absolute inset-0">
+            <Image
               src={project.image}
               alt={project.imageAlt}
               fill
               sizes="(min-width: 1024px) 540px, (min-width: 768px) 45vw, 100vw"
               className="object-cover"
-              priority={index < 2} */}
-            {/* /> */}
+              priority={index < 2}
+            />
           </div>
         </div>
 
+        {/* Project Content */}
         <div className="flex flex-col gap-2.5 px-1 pb-1">
           <h3 className="text-[20px] font-medium leading-[1.2] tracking-tight text-foreground sm:text-[22px]">
             {project.title}
           </h3>
+
           <p className="text-[14px] leading-normal tracking-tight text-foreground/65 sm:text-[15px]">
             {project.description}
           </p>
         </div>
 
-        <p className="px-1 pb-2 text-[12px] tracking-tight text-foreground/50">
-          {project.meta}
-        </p>
+        {/* Project Meta + GitHub Button */}
+        <div className="flex items-center justify-between gap-3 px-1 pb-2">
+          <p className="text-[12px] tracking-tight text-foreground/50">
+            {project.meta}
+          </p>
+
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-foreground/10 bg-foreground/4 px-3.5 py-2 text-[12px] font-medium tracking-tight text-foreground transition-all duration-200 hover:bg-foreground/8 hover:border-foreground/20"
+            //onClick={(e) => e.stopPropagation()}
+          >
+            <Github
+              className="h-3.5 w-3.5"
+              aria-hidden="true"
+            />
+            View GitHub
+          </a>
+        </div>
       </article>
     </FadeIn>
   );
