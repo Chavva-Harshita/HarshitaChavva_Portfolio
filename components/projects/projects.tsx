@@ -2,6 +2,8 @@ import {
   Bot,
   Github,
   Layers,
+  Leaf,
+  Link,
   Wand2,
 } from "lucide-react";
 import Image from "next/image";
@@ -22,6 +24,36 @@ type Project = {
 };
 
 const PROJECTS: Project[] = [
+
+  {
+    id: "snip",
+    icon: Link,
+    iconLabel: "SNIP URL Shortener",
+    title:
+      "A URL shortening platform that transforms long URLs into compact, shareable links with redirection and click tracking.",
+    description:
+      "I built SNIP using Java and Spring Boot, with MySQL for persistent storage. It provides REST APIs for URL creation, redirection, and click statistics, with automated backend testing.",
+    meta: "Backend / Full-Stack Project, 2026",
+    imageRatio: 1024 / 768,
+    image: "/snip.png",
+    imageAlt: "SNIP URL shortener application",
+    githubUrl: "https://github.com/Chavva-Harshita/url-shortener",
+  },
+  {
+    id: "ecogrid",
+    icon: Leaf,
+    iconLabel: "EcoGrid",
+    title:
+      "An environmental data analytics platform designed to monitor patterns, identify anomalies, and support data-driven sustainability insights.",
+    description:
+      "I worked on EcoGrid's backend analytics, integrating MySQL with Python-based data processing using Pandas, statistical z-score analysis, and Isolation Forest for anomaly detection through REST API endpoints.",
+    meta: "Data Analytics / Backend Project, 2026",
+    imageRatio: 1024 / 768,
+    image: "/ecogrid.png",
+    imageAlt: "EcoGrid environmental analytics platform",
+    githubUrl: "YOUR_ECOGRID_GITHUB_URL",
+  },
+
   {
     id: "synapse",
     icon: Bot,
@@ -32,7 +64,7 @@ const PROJECTS: Project[] = [
       "I built Synapse as a RAG-based memory system that combines a FastAPI backend with retrieval-augmented generation to turn stored information into contextual AI responses.",
     meta: "AI / Full-Stack Project, 2026",
     imageRatio: 1024 / 768,
-    image: "/synapse.jpg",
+    image: "/synapse.png",
     imageAlt: "Synapse AI memory and RAG system",
     githubUrl: "https://github.com/Chavva-Harshita/synapse-ai",
   },
@@ -67,21 +99,7 @@ const PROJECTS: Project[] = [
     githubUrl: "https://github.com/Soumya1-byte/FlexyWork",
   },
 
-  {
-    id: "clearlift",
-    icon: Layers,
-    iconLabel: "ClearLift",
-    title:
-      "An AI-powered platform designed to automate and streamline business workflows through intelligent agents and secure service integrations.",
-    description:
-      "I built ClearLift to explore AI-driven workflow automation, multi-agent systems, and scalable backend architecture. The platform uses specialized AI agents to analyze tasks, coordinate workflows, and deliver actionable results through a full-stack application.",
-    meta: "AI & Full-Stack Project, 2026",
-    imageRatio: 1024 / 768,
-    image: "/clearlift.png",
-    imageAlt:
-      "ClearLift AI-powered workflow automation platform interface",
-    githubUrl: "https://github.com/Chavva-Harshita/CLEARLIFT",
-  },
+  
 ];
 
 export type ProjectsProps = {
